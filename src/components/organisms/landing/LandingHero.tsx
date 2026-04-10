@@ -48,12 +48,12 @@ export default function LandingHero() {
           </p>
 
           <div className="mt-10 flex items-center justify-center gap-2">
-            <Button size={"lg"} className="px-12 py-6">
+            <Button size={"lg"} className="md:px-12 md:py-6">
               <Link href="https://app.amunisiptn.com" className="font-semibold">
                 Mulai Belajar
               </Link>
             </Button>
-            <Button size={"lg"} className="p-6">
+            <Button size={"lg"} className="md:p-6 md:block hidden">
               <Link href="https://app.amunisiptn.com" className="font-semibold">
                 <ArrowUpRight className="h-5 w-5" />
               </Link>
