@@ -30,9 +30,9 @@ export default function Navbar() {
         active: pathname.startsWith("/products"),
       },
       {
-        href: "/bussiness",
+        href: "/business",
         label: "Bisnis",
-        active: pathname.startsWith("/bussiness"),
+        active: pathname.startsWith("/business"),
       },
       {
         href: "/packages",

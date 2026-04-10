@@ -9,13 +9,12 @@ export default function NavL() {
           <Link href={"/"} className="flex items-center gap-2">
             <div className="flex items-center">
               <Image
-                src={"/images/logo.png"}
+                src={"/images/logo/logo.png"}
                 alt="Amunisi PTN"
-                width={25}
-                height={25}
+                width={150}
+                height={150}
               />
             </div>
-            <h1 className="font-bold">Amunisi PTN</h1>
           </Link>
         </div>
       </div>

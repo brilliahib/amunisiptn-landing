@@ -12,6 +12,7 @@ import {
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { Menu } from "lucide-react";
 
 function MobileLink({
   href,
@@ -49,11 +50,11 @@ export default function NavButton() {
     <>
       <div className="hidden items-center gap-4 md:flex">
         <div className="flex items-center gap-4">
-          <Link href="/login">
-            <Button size={"lg"} className="rounded-md">
-              Login
-            </Button>
-          </Link>
+          <Button className="rounded-full" asChild size={"lg"}>
+            <Link href="https://app.amunisiptn.com" className="font-semibold">
+              Mulai Belajar
+            </Link>
+          </Button>
         </div>
       </div>
 
@@ -61,11 +62,8 @@ export default function NavButton() {
         <Sheet>
           {/* Hamburger */}
           <SheetTrigger asChild>
-            <Button
-              variant="default"
-              className="rounded-md bg-[#e6e6e6] font-semibold text-black hover:bg-[#e6e6e6] hover:bg-[#e6e6e6]/80 md:hidden"
-            >
-              Menu
+            <Button variant={"ghost"}>
+              <Menu className="h-5 w-5" />
             </Button>
           </SheetTrigger>
 
@@ -77,11 +75,11 @@ export default function NavButton() {
                 className="flex items-center justify-center gap-2 text-left font-semibold"
               >
                 <Image
-                  src={"/images/logo.png"}
-                  alt="DipoAssist"
+                  src={"/images/logo/logo.png"}
+                  alt="Amunisi PTN"
                   width={100}
                   height={100}
-                  className="max-w-[50px]"
+                  className="max-w-[100px]"
                 />
               </Link>
             </SheetHeader>
@@ -89,25 +87,31 @@ export default function NavButton() {
               <MobileLink href="/" pathname={pathname}>
                 Beranda
               </MobileLink>
-              <MobileLink href="/features" pathname={pathname}>
-                Fitur
+              <MobileLink href="/products" pathname={pathname}>
+                Produk
               </MobileLink>
-              <MobileLink href="/about" pathname={pathname}>
-                Tentang
+              <MobileLink href="/business" pathname={pathname}>
+                Bisnis
+              </MobileLink>
+              <MobileLink href="/packages" pathname={pathname}>
+                Paket Belajar
+              </MobileLink>
+              <MobileLink href="/testimonials" pathname={pathname}>
+                Testimoni
               </MobileLink>
               <MobileLink href="/blog" pathname={pathname}>
-                Artikel
+                Blog
               </MobileLink>
             </nav>
             <SheetFooter>
-              <Link
-                href="/login"
-                className="flex items-center justify-center gap-2 text-left font-semibold"
-              >
-                <Button size={"lg"} className="w-full rounded-md">
-                  Login
-                </Button>
-              </Link>
+              <Button className="rounded-full" asChild>
+                <Link
+                  href="https://app.amunisiptn.com"
+                  className="font-semibold"
+                >
+                  Mulai Belajar
+                </Link>
+              </Button>
             </SheetFooter>
           </SheetContent>
         </Sheet>
