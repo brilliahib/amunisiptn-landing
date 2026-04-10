@@ -53,8 +53,14 @@ export default function LandingHero() {
                 Mulai Belajar
               </Link>
             </Button>
-            <Button size={"lg"} className="md:p-6 md:block hidden">
-              <Link href="https://app.amunisiptn.com" className="font-semibold">
+            <Button
+              size="lg"
+              className="md:p-6 md:flex hidden items-center justify-center"
+            >
+              <Link
+                href="https://app.amunisiptn.com"
+                className="font-semibold flex items-center justify-center"
+              >
                 <ArrowUpRight className="h-5 w-5" />
               </Link>
             </Button>
