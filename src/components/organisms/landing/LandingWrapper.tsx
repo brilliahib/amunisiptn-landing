@@ -1,6 +1,5 @@
 import LandingHero from "./LandingHero";
 import LandingPTN from "./LandingPTN";
-import LandingTicket from "./LandingTicket";
 
 export default function LandingWrapper() {
   return (
@@ -9,7 +8,6 @@ export default function LandingWrapper() {
         <LandingHero />
         <LandingPTN />
       </div>
-      <LandingTicket />
     </section>
   );
 }
