@@ -88,7 +88,7 @@ export default function LandingTicket() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
           {ticketPackages.map((pkg) => (
             <TicketCard key={pkg.id} pkg={pkg} />
           ))}
@@ -123,7 +123,7 @@ function TicketCard({ pkg }: { pkg: TicketPackage }) {
         <img
           src={pkg.image}
           alt={`Ilustrasi ${pkg.title}`}
-          className="h-40 w-full object-cover"
+          className="h-60 w-full object-cover"
         />
       </div>
 

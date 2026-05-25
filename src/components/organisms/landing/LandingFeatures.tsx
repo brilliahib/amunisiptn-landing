@@ -1,11 +1,4 @@
-import {
-  BarChart2,
-  BookOpenCheck,
-  Globe,
-  Star,
-  Video,
-  Zap,
-} from "lucide-react";
+import { BarChart2, BookOpenCheck, Globe } from "lucide-react";
 
 const features = [
   {

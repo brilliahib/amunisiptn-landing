@@ -128,17 +128,16 @@ export default function LandingHero() {
             </svg>
           </div>
 
-          <h1 className="text-5xl font-black leading-tight tracking-tight sm:text-6xl lg:text-7xl">
-            {/* Line 1 — white rounded card for contrast */}
+          <h1 className="mx-auto max-w-4xl text-center text-3xl font-black leading-tight tracking-tight sm:text-5xl lg:text-7xl">
             <span className="mb-3 inline-block">
-              <span className="rounded-2xl bg-white px-5 py-1.5 text-foreground">
+              <span className="inline-block rounded-2xl bg-white px-3 py-1.5 text-foreground sm:px-5">
                 Cara Seru <span className="font-medium">dan</span> Efektif
               </span>
             </span>
-            <br />
-            {/* Line 2 — white text + yellow highlight word */}
-            <span className="font-medium text-white">Persiapkan </span>
-            <span style={{ color: "#FBBF24" }}>UTBK-UM!</span>
+
+            <span className="mt-2 block font-medium text-white">
+              Persiapkan <span className="text-[#FBBF24]">UTBK-UM!</span>
+            </span>
           </h1>
         </div>
 
