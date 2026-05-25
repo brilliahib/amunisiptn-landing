@@ -13,6 +13,7 @@ export default function NavL() {
                 alt="Amunisi PTN"
                 width={150}
                 height={150}
+                className="brightness-0 invert"
               />
             </div>
           </Link>

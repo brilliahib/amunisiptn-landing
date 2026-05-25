@@ -1,35 +1,40 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/organisms/nav/Navbar";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Amunisi PTN - Tryout & Bimbel SNBP, UTBK (SNBT) & UM PTN",
+  title: "Amunisi PTN — Platform Try Out UTBK SNBT & UM PTN Terbaik",
   description:
-    "Amunisi PTN adalah platform tryout dan bimbingan intensif untuk persiapan SNBP, UTBK (SNBT), dan UM PTN. Dapatkan simulasi ujian real-time, pembahasan lengkap, kelas intensif, dan analitik progress untuk strategi masuk PTN terbaikmu.",
+    "Persiapkan UTBK-SNBT dan UM PTN kamu bersama Amunisi PTN. Ribuan soal latihan, simulasi try out real-time, pembahasan video lengkap, dan analitik performa untuk strategi lolos PTN impianmu.",
   keywords: [
     "tryout utbk",
-    "bimbel snbp",
-    "bimbel utbk online",
+    "tryout snbt",
     "latihan soal utbk",
     "simulasi utbk snbt",
-    "prediksi passing grade",
-    "tips lolos snbp",
-    "persiapan um ptn",
-    "materi utbk dan pembahasan",
+    "prediksi nilai utbk",
+    "tryout um ptn",
+    "bimbel ptn online",
     "bank soal utbk",
+    "persiapan masuk ptn",
     "Amunisi PTN",
     "platform tryout indonesia",
-    "persiapan utbk",
+    "tryout gratis utbk",
   ],
   authors: [{ name: "Amunisi PTN", url: "https://www.amunisiptn.com" }],
   applicationName: "Amunisi PTN",
@@ -49,9 +54,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Amunisi PTN - Tryout & Bimbel SNBP, UTBK (SNBT) & UM PTN",
+    title: "Amunisi PTN — Platform Try Out UTBK SNBT & UM PTN Terbaik",
     description:
-      "Gabung Amunisi PTN untuk tryout UTBK: simulasi ujian real-time, pembahasan lengkap, kelas intensif, dan analitik progress. Siapkan strategi masuk PTN terbaikmu.",
+      "Ribuan soal latihan, simulasi try out real-time, dan analitik performa. Siapkan strategi masuk PTN impianmu bersama Amunisi PTN.",
     url: "https://www.amunisiptn.com",
     siteName: "Amunisi PTN",
     images: [
@@ -59,7 +64,7 @@ export const metadata: Metadata = {
         url: "https://www.amunisiptn.com/images/logo/logo.png",
         width: 1200,
         height: 630,
-        alt: "Amunisi PTN - Tryout & Bimbel SNBP, UTBK, UM PTN",
+        alt: "Amunisi PTN — Platform Try Out UTBK SNBT & UM PTN",
       },
     ],
     locale: "id_ID",
@@ -67,9 +72,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amunisi PTN - Tryout & Bimbel SNBP, UTBK (SNBT) & UM PTN",
+    title: "Amunisi PTN — Platform Try Out UTBK SNBT & UM PTN Terbaik",
     description:
-      "Simulasi UTBK, pembahasan lengkap, dan paket bimbel intensif - semua ada di Amunisi PTN.",
+      "Simulasi try out UTBK, pembahasan lengkap, dan analitik performa — semua ada di Amunisi PTN.",
     creator: "@AmunisiPTN",
     images: ["https://www.amunisiptn.com/images/logo/logo.png"],
   },
@@ -81,9 +86,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("h-full", "antialiased", poppins.variable)}>
-      <Navbar />
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html
+      lang="id"
+      className={cn(
+        "h-full antialiased",
+        outfit.variable,
+        plusJakartaSans.variable,
+      )}
+    >
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

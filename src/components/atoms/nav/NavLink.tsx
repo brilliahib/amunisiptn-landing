@@ -1,22 +1,22 @@
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-interface Link {
+interface NavLinkProps {
   href: string;
   label: string;
-  active?: boolean;
 }
 
-export default function NavLink({ href, label, active }: Link) {
+export default function NavLink({ href, label }: NavLinkProps) {
   return (
-    <Link
+    <a
       href={href}
-      className={cn("flex items-center rounded font-normal", {
-        "text-muted-foreground hover:text-primary": !active,
-        "text-primary": active,
-      })}
+      className={cn(
+        "relative font-medium text-white/75 transition-colors duration-200",
+        "hover:text-white",
+        "after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:bg-white after:transition-all after:duration-300",
+        "hover:after:w-full",
+      )}
     >
       {label}
-    </Link>
+    </a>
   );
 }

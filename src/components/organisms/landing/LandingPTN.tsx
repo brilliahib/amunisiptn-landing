@@ -21,32 +21,36 @@ export const ptn = [
 
 export default function LandingPTN() {
   return (
-    <section className="mt-16 flex flex-col gap-8">
-      <div className="text-center">
-        <h3 className="font-semibold text-xl">
-          Siswa kami diterima di PTN top Indonesia
-        </h3>
+    <section
+      id="ptn"
+      className="border-y-2 border-[#1E293B] bg-[#EEF4FF] py-10"
+    >
+      <div className="pad-x mb-6 text-center">
+        <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">
+          Siswa kami diterima di PTN top Indonesia 🎓
+        </p>
       </div>
       <div className="relative overflow-hidden">
-        <Marquee pauseOnHover className="[--duration:20s]">
+        <Marquee pauseOnHover className="[--duration:25s]">
           {ptn.map((item, i) => (
             <div
               key={i}
-              className="mx-2 flex max-w-none cursor-default items-center gap-x-3 text-sm font-medium"
+              className="mx-4 flex items-center gap-x-3 rounded-xl border-2 border-[#E2E8F0] bg-white px-4 py-2.5 text-sm font-semibold text-foreground shadow-sm anim-bounce hover:-translate-y-0.5"
             >
               <Image
                 src={item.logo || "/vercel.svg"}
-                alt="logo"
-                width={50}
-                height={50}
-                className="rounded"
+                alt={item.name}
+                width={32}
+                height={32}
+                className="rounded object-contain"
               />
               {item.name}
             </div>
           ))}
         </Marquee>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/5 bg-gradient-to-r from-white dark:from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/5 bg-gradient-to-l from-white dark:from-background"></div>
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#EEF4FF]" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#EEF4FF]" />
       </div>
     </section>
   );
