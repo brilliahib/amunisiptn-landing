@@ -63,23 +63,17 @@ export default function LandingTicket() {
   return (
     <section id="harga" className="bg-[#EEF4FF] py-20 md:py-28">
       <div className="pad-x">
-        {/* Section header */}
         <div className="mb-14 text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border-2 border-[#1E293B] bg-white px-4 py-1.5 shadow-pop">
-            <span className="text-sm font-bold uppercase tracking-widest text-primary">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border-2 border-[#1E293B] bg-white px-4 py-1.5 shadow-[2px_2px_0px_0px_#1E293B]">
+            <span className="text-sm font-extrabold uppercase tracking-widest text-[#004aab]">
               Harga Tiket
             </span>
           </div>
-          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl lg:text-5xl">
-            Pilih Paket{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10">Terbaik Untukmu</span>
-              <span
-                className="absolute bottom-1 left-0 -z-0 h-3.5 w-full rounded-sm opacity-50"
-                style={{ backgroundColor: "#FBBF24" }}
-                aria-hidden="true"
-              />
-            </span>
+          <h2
+            className="font-rubik text-4xl font-extrabold uppercase tracking-tighter text-[#1E293B] sm:text-5xl lg:text-6xl"
+            style={{ textShadow: "2px 2px 0px #93c5fd" }}
+          >
+            Pilih Paket Terbaik Untukmu
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base text-muted-foreground">
             Beli tiket try out dan mulai persiapan UTBK-SNBT &amp; UM PTN
@@ -101,17 +95,17 @@ export default function LandingTicket() {
 function TicketCard({ pkg }: { pkg: TicketPackage }) {
   return (
     <div
-      className={`relative flex flex-col rounded-2xl border-2 border-[#1E293B] bg-white anim-bounce ${
+      className={`relative flex flex-col rounded-2xl border-2 border-[#1E293B] bg-white transition-transform ${
         pkg.featured
-          ? "shadow-pop-featured hover:-rotate-1 hover:scale-[1.02]"
-          : "shadow-pop-card hover:-rotate-1 hover:scale-[1.02]"
+          ? "shadow-[4px_4px_0px_0px_#004aab] hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#004aab]"
+          : "shadow-pop-card hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#e2e8f0]"
       }`}
     >
       {/* Featured star badge */}
       {pkg.featured && (
         <div
-          className="absolute -right-4 -top-5 z-10 rotate-12 rounded-xl border-2 border-[#1E293B] px-3 py-1.5 text-xs font-extrabold text-[#1E293B] shadow-pop"
-          style={{ backgroundColor: "#FBBF24" }}
+          className="absolute -right-3 -top-4 z-10 rotate-6 rounded-xl border-2 border-[#1E293B] px-3 py-1.5 text-xs font-extrabold uppercase tracking-widest text-[#1E293B] shadow-[2px_2px_0px_0px_#1E293B]"
+          style={{ backgroundColor: "#3b82f6" }}
           aria-label="Paket paling populer"
         >
           ⭐ TERPOPULER
@@ -119,7 +113,7 @@ function TicketCard({ pkg }: { pkg: TicketPackage }) {
       )}
 
       {/* Package image — full width, rounded top */}
-      <div className="overflow-hidden rounded-t-[14px]">
+      <div className="overflow-hidden rounded-t-[14px] border-b-2 border-[#1E293B]">
         <img
           src={pkg.image}
           alt={`Ilustrasi ${pkg.title}`}
@@ -129,11 +123,11 @@ function TicketCard({ pkg }: { pkg: TicketPackage }) {
 
       {/* Card header */}
       <div
-        className="px-6 py-4"
+        className="border-b-2 border-[#1E293B] px-6 py-4"
         style={{ backgroundColor: pkg.featured ? "#004aab" : "#F1F5F9" }}
       >
         <p
-          className={`text-base font-extrabold ${pkg.featured ? "text-white" : "text-foreground"}`}
+          className={`font-rubik text-xl font-extrabold tracking-wide ${pkg.featured ? "text-white" : "text-[#1E293B]"}`}
         >
           {pkg.title}
         </p>
@@ -164,8 +158,12 @@ function TicketCard({ pkg }: { pkg: TicketPackage }) {
         <p className="text-sm text-muted-foreground">{pkg.perks}</p>
 
         {/* CTA */}
-        <div className="mt-auto pt-2">
-          <Button className="w-full" size="lg" asChild>
+        <div className="mt-auto pt-4">
+          <Button
+            className="w-full border-2 border-[#1E293B] font-extrabold shadow-[2px_2px_0px_0px_#1E293B] transition-all hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#1E293B] active:translate-y-0 active:shadow-none"
+            size="lg"
+            asChild
+          >
             <Link
               href="https://app.amunisiptn.com"
               target="_blank"

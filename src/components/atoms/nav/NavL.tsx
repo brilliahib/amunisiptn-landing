@@ -1,24 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function NavL() {
+interface NavLProps {
+  isScrolled?: boolean;
+}
+
+export default function NavL({ isScrolled }: NavLProps) {
   return (
-    <>
-      <div className="flex items-center gap-4">
-        <div className="flex items-center">
-          <Link href={"/"} className="flex items-center gap-2">
-            <div className="flex items-center">
-              <Image
-                src={"/images/logo/logo.png"}
-                alt="Amunisi PTN"
-                width={150}
-                height={150}
-                className="brightness-0 invert"
-              />
-            </div>
-          </Link>
-        </div>
-      </div>
-    </>
+    <div className="flex shrink-0 items-center">
+      <Link href="/" className="flex items-center gap-2">
+        <Image
+          src="/images/logo/logo.png"
+          alt="Amunisi PTN"
+          width={120}
+          height={40}
+          className={`transition-all duration-300 ${
+            isScrolled ? "brightness-0 invert h-7 w-auto" : "h-8 w-auto md:h-9"
+          }`}
+        />
+      </Link>
+    </div>
   );
 }

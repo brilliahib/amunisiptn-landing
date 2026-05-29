@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans, Rubik } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/organisms/nav/Navbar";
@@ -9,6 +9,13 @@ const outfit = Outfit({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const rubik = Rubik({
+  variable: "--font-rubik",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -92,6 +99,7 @@ export default function RootLayout({
         "h-full antialiased",
         outfit.variable,
         plusJakartaSans.variable,
+        rubik.variable,
       )}
     >
       <body className="min-h-full flex flex-col">

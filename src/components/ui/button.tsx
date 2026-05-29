@@ -14,7 +14,7 @@ const buttonVariants = cva(
           "bg-primary text-white border-2 border-[#1E293B] rounded-full shadow-pop anim-bounce hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_#1E293B] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_0px_#1E293B]",
         /* ── Playful: Outline / Secondary ── */
         outline:
-          "bg-transparent text-foreground border-2 border-[#1E293B] rounded-full anim-bounce hover:bg-[#FBBF24] active:scale-95",
+          "bg-transparent text-foreground border-2 border-[#1E293B] rounded-full anim-bounce hover:bg-[#3b82f6] active:scale-95",
         /* ── Ghost ── */
         ghost: "hover:bg-accent hover:text-accent-foreground rounded-lg",
         /* ── Destructive ── */

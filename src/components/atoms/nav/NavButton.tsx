@@ -34,14 +34,23 @@ function MobileLink({
   );
 }
 
-export default function NavButton({ links }: { links: NavLinkItem[] }) {
+interface NavButtonProps {
+  links: NavLinkItem[];
+  isScrolled?: boolean;
+}
+
+export default function NavButton({ links, isScrolled }: NavButtonProps) {
   return (
     <>
       {/* Desktop CTA */}
       <div className="hidden items-center gap-3 md:flex">
         <Button
-          size="lg"
-          className="border-2 border-white bg-white text-primary hover:bg-[#FBBF24] hover:text-[#1E293B] hover:border-[#FBBF24]"
+          size="default"
+          className={`rounded-full text-sm font-semibold transition-all duration-300 ${
+            isScrolled
+              ? "border-2 border-white bg-white text-primary hover:bg-[#3b82f6] hover:text-[#1E293B] hover:border-[#3b82f6]"
+              : "border-2 border-primary bg-primary text-white hover:bg-primary/90"
+          }`}
           asChild
         >
           <Link
@@ -61,13 +70,20 @@ export default function NavButton({ links }: { links: NavLinkItem[] }) {
             <Button
               variant="ghost"
               size="icon"
-              className="text-white hover:bg-white/15 hover:text-white"
+              className={`transition-colors duration-300 ${
+                isScrolled
+                  ? "text-white hover:bg-white/15 hover:text-white"
+                  : "text-foreground hover:bg-foreground/10 hover:text-foreground"
+              }`}
             >
               <Menu className="h-5 w-5" strokeWidth={2.5} />
             </Button>
           </SheetTrigger>
 
-          <SheetContent className="flex flex-col gap-6">
+          <SheetContent
+            side="top"
+            className="flex flex-col gap-6 rounded-[2rem] border-2 border-[#1E293B] bg-white px-6 pb-8 pt-6 shadow-[4px_4px_0px_0px_#1E293B] data-[side=top]:inset-x-3 data-[side=top]:top-4 data-[side=top]:w-auto sm:max-w-sm"
+          >
             <SheetHeader>
               <SheetTitle className="sr-only">Menu Navigasi</SheetTitle>
               <SheetClose asChild>

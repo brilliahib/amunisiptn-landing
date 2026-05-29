@@ -29,34 +29,40 @@ const socialLinks = [
 
 export default function LandingFooter() {
   return (
-    <footer className="border-t-2 border-[#1E293B] bg-[#1E293B] py-12">
+    <footer className="border-t-4 border-[#1E293B] bg-[#EEF4FF] py-16">
       <div className="pad-x">
-        <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
+        <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between">
           {/* Logo + tagline */}
-          <div className="flex flex-col items-center gap-3 md:items-start">
-            <Link href="/" aria-label="Amunisi PTN – halaman utama">
+          <div className="flex flex-col items-center gap-6 md:items-start">
+            <Link
+              href="/"
+              aria-label="Amunisi PTN – halaman utama"
+              className="inline-block rounded-xl border-4 border-[#1E293B] bg-white px-5 py-3 shadow-[6px_6px_0px_0px_#1E293B] transition-transform hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#1E293B]"
+            >
               <Image
                 src="/images/logo/logo.png"
                 alt="Amunisi PTN"
-                width={130}
-                height={130}
-                className="brightness-0 invert"
+                width={140}
+                height={140}
+                className="h-auto w-auto"
               />
             </Link>
-            <p className="max-w-xs text-center text-sm text-white/60 md:text-left">
-              Platform try out UTBK-SNBT &amp; UM PTN terlengkap di Indonesia.
+            <p className="max-w-xs text-center font-bold text-[#1E293B] md:text-left">
+              Platform try out UTBK-SNBT & UM PTN terlengkap di Indonesia.
             </p>
           </div>
 
           {/* Nav links */}
-          <nav aria-label="Footer navigation">
-            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:justify-end">
+          <nav aria-label="Footer navigation" className="mt-4 md:mt-0">
+            <ul className="flex flex-wrap justify-center gap-x-8 gap-y-6 md:justify-end">
               {footerLinks.map((link) => (
-                <li
-                  key={link.label}
-                  className="text-sm font-medium text-white/60 transition-colors hover:text-white"
-                >
-                  <a href={link.href}>{link.label}</a>
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="font-extrabold uppercase tracking-widest text-[#1E293B] transition-all hover:text-primary hover:underline hover:decoration-4 hover:underline-offset-4"
+                  >
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -64,16 +70,16 @@ export default function LandingFooter() {
         </div>
 
         {/* Divider */}
-        <div className="my-8 h-px bg-white/10" />
+        <div className="my-10 h-1 w-full bg-[#1E293B]" />
 
         {/* Bottom bar */}
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-          <p className="text-xs text-white/40">
+        <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+          <p className="font-bold text-[#1E293B]">
             &copy; {new Date().getFullYear()} Amunisi PTN. Hak Cipta Dilindungi.
           </p>
 
           {/* Social links */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             {socialLinks.map(({ href, label, short }) => (
               <Link
                 key={label}
@@ -81,7 +87,7 @@ export default function LandingFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-xs font-bold text-white/60 transition-all duration-200 hover:border-white/60 hover:text-white"
+                className="flex h-12 w-12 items-center justify-center rounded-full border-4 border-[#1E293B] bg-white font-black text-[#1E293B] shadow-[4px_4px_0px_0px_#1E293B] transition-all hover:-translate-x-1 hover:-translate-y-1 hover:bg-[#3b82f6] hover:text-white hover:shadow-[6px_6px_0px_0px_#1E293B] active:translate-x-1 active:translate-y-1 active:shadow-none"
               >
                 {short}
               </Link>

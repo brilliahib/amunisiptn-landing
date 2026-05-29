@@ -21,13 +21,10 @@ export const ptn = [
 
 export default function LandingPTN() {
   return (
-    <section
-      id="ptn"
-      className="border-y-2 border-[#1E293B] bg-[#EEF4FF] py-10"
-    >
-      <div className="pad-x mb-6 text-center">
-        <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">
-          Siswa kami diterima di PTN top Indonesia 🎓
+    <section id="ptn" className="bg-transparent py-10 sm:bg-[#EEF4FF]">
+      <div className="pad-x mb-12 text-center">
+        <p className="font-bold uppercase tracking-widest">
+          Siswa kami diterima di PTN top Indonesia
         </p>
       </div>
       <div className="relative overflow-hidden">
@@ -35,22 +32,21 @@ export default function LandingPTN() {
           {ptn.map((item, i) => (
             <div
               key={i}
-              className="mx-4 flex items-center gap-x-3 rounded-xl border-2 border-[#E2E8F0] bg-white px-4 py-2.5 text-sm font-semibold text-foreground shadow-sm anim-bounce hover:-translate-y-0.5"
+              className="mx-4 flex items-center gap-x-3 text-[14px] font-semibold text-foreground anim-bounce hover:-translate-y-0.5"
             >
               <Image
                 src={item.logo || "/vercel.svg"}
                 alt={item.name}
-                width={32}
-                height={32}
+                width={42}
+                height={42}
                 className="rounded object-contain"
               />
               {item.name}
             </div>
           ))}
         </Marquee>
-        {/* Fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#EEF4FF]" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#EEF4FF]" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-transparent sm:from-[#EEF4FF]" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-transparent sm:from-[#EEF4FF]" />
       </div>
     </section>
   );

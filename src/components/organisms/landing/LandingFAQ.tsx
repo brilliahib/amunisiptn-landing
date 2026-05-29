@@ -115,21 +115,16 @@ export default function LandingFAQ() {
         <div className="mx-auto max-w-3xl">
           {/* Section header */}
           <div className="mb-14 text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border-2 border-[#1E293B] bg-white px-4 py-1.5 shadow-pop">
-              <span className="text-sm font-bold uppercase tracking-widest text-primary">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border-2 border-[#1E293B] bg-white px-4 py-1.5 shadow-[2px_2px_0px_0px_#1E293B]">
+              <span className="text-sm font-extrabold uppercase tracking-widest text-[#004aab]">
                 FAQ
               </span>
             </div>
-            <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl lg:text-5xl">
-              Pertanyaan yang Sering{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10">Ditanyakan</span>
-                <span
-                  className="absolute bottom-1 left-0 -z-0 h-3.5 w-full rounded-sm opacity-50"
-                  style={{ backgroundColor: "#34D399" }}
-                  aria-hidden="true"
-                />
-              </span>
+            <h2
+              className="font-rubik text-4xl font-extrabold uppercase tracking-tighter text-[#1E293B] sm:text-5xl lg:text-6xl"
+              style={{ textShadow: "2px 2px 0px #93c5fd" }}
+            >
+              Pertanyaan yang Sering Ditanyakan
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground">
               Masih ada pertanyaan? Hubungi kami melalui media sosial atau email

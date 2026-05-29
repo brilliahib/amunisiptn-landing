@@ -27,7 +27,7 @@ const topTestimonials: Testimonial[] = [
     quote:
       "Pembahasan videonya sangat lengkap dan mudah dipahami. Try out mingguan gratis juga sangat membantu saya berlatih secara rutin. Saya sangat merekomendasikan platform ini.",
     rating: 5,
-    accentColor: "#F472B6",
+    accentColor: "#004aab",
   },
   {
     name: "Farhan Maulana",
@@ -36,7 +36,7 @@ const topTestimonials: Testimonial[] = [
     quote:
       "Fitur prediksi nilai membuat saya lebih tenang dalam menghadapi UTBK. Peringkat nasional juga menjadi motivasi untuk terus meningkatkan kemampuan. Dalam dua bulan, skor saya meningkat signifikan.",
     rating: 5,
-    accentColor: "#FBBF24",
+    accentColor: "#3b82f6",
   },
   {
     name: "Dian Kusuma",
@@ -45,7 +45,7 @@ const topTestimonials: Testimonial[] = [
     quote:
       "Platform ini merupakan yang paling lengkap yang pernah saya gunakan. Soal-soalnya sangat relevan dengan UTBK, dan analisis performanya sangat detail. Sangat layak untuk dicoba.",
     rating: 5,
-    accentColor: "#34D399",
+    accentColor: "#60a5fa",
   },
   {
     name: "Nabila Azzahra",
@@ -203,7 +203,7 @@ function StarRating({ count }: { count: number }) {
         <Star
           key={i}
           className="h-4 w-4 fill-current"
-          style={{ color: "#FBBF24" }}
+          style={{ color: "#3b82f6" }}
           strokeWidth={0}
         />
       ))}
@@ -285,21 +285,16 @@ export default function LandingTestimonials() {
     <section id="testimoni" className="bg-white py-20 md:py-28">
       <div>
         <div className="mb-14 text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border-2 border-[#1E293B] bg-[#EEF4FF] px-4 py-1.5 shadow-pop">
-            <span className="text-sm font-bold uppercase tracking-widest text-primary">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border-2 border-[#1E293B] bg-[#EEF4FF] px-4 py-1.5 shadow-[2px_2px_0px_0px_#1E293B]">
+            <span className="text-sm font-extrabold uppercase tracking-widest text-[#004aab]">
               Testimoni
             </span>
           </div>
-          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl lg:text-5xl">
-            Mereka Sudah Lolos,{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10">Giliranmu!</span>
-              <span
-                className="absolute bottom-1 left-0 -z-0 h-3.5 w-full rounded-sm opacity-50"
-                style={{ backgroundColor: "#F472B6" }}
-                aria-hidden="true"
-              />
-            </span>
+          <h2
+            className="font-rubik text-4xl font-extrabold uppercase tracking-tighter text-[#1E293B] sm:text-5xl lg:text-6xl"
+            style={{ textShadow: "2px 2px 0px #93c5fd" }}
+          >
+            Mereka Sudah Lolos, Giliranmu!
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground">
             Ribuan peserta telah membuktikan efektivitas Amunisi PTN. Mari

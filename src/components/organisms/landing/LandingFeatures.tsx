@@ -13,14 +13,14 @@ const features = [
     title: "Analitik Performa",
     description:
       "Pantau perkembangan nilaimu secara langsung. Identifikasi kelemahan dan fokus belajar lebih efisien.",
-    accent: "#F472B6",
+    accent: "#004aab",
   },
   {
     icon: Globe,
     title: "Ranking Nasional",
     description:
       "Bandingkan skormu dengan peserta dari seluruh Indonesia dan ukur kesiapan masuk PTN impianmu.",
-    accent: "#FBBF24",
+    accent: "#3b82f6",
   },
 ];
 
@@ -30,21 +30,16 @@ export default function LandingFeatures() {
       <div className="pad-x">
         {/* Section header */}
         <div className="mb-14 text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border-2 border-[#1E293B] bg-[#EEF4FF] px-4 py-1.5 shadow-pop">
-            <span className="text-sm font-bold uppercase tracking-widest text-primary">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border-2 border-[#1E293B] bg-[#EEF4FF] px-4 py-1.5 shadow-[2px_2px_0px_0px_#1E293B]">
+            <span className="text-sm font-extrabold uppercase tracking-widest text-[#004aab]">
               Fitur Unggulan
             </span>
           </div>
-          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl lg:text-5xl">
-            Semua yang Kamu Butuhkan{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10">Ada di Sini</span>
-              <span
-                className="absolute bottom-1 left-0 -z-0 h-3.5 w-full rounded-sm opacity-50"
-                style={{ backgroundColor: "#34D399" }}
-                aria-hidden="true"
-              />
-            </span>
+          <h2
+            className="font-rubik text-4xl font-extrabold uppercase tracking-tighter text-[#1E293B] sm:text-5xl lg:text-6xl"
+            style={{ textShadow: "2px 2px 0px #93c5fd" }}
+          >
+            Semua yang Kamu Butuhkan Ada di Sini
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground">
             Platform try out PTN paling lengkap — dari latihan soal harian
