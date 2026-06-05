@@ -352,25 +352,19 @@ export default function LandingHero() {
             transition: "all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s",
           }}
         >
-          {/* Line 1: "SIAP LOLOS" in primary color */}
-          <h1 className="mb-1 flex flex-col items-center justify-center gap-0 sm:mb-2 sm:flex-row sm:gap-5 md:gap-7">
+          {/* Line 1: "Bersama Amunisi," in primary color */}
+          <h1 className="mb-1 flex flex-col items-center justify-center gap-0 sm:mb-2 sm:flex-row sm:gap-3 md:gap-4 uppercase">
             <span
-              className="font-rubik text-5xl font-extrabold leading-none tracking-tighter text-primary sm:text-7xl md:text-8xl xl:text-9xl"
-              style={{ textShadow: "4px 4px 0px #1E293B" }}
+              className="font-rubik text-5xl font-black leading-tight tracking-tighter text-primary sm:text-5xl md:text-6xl xl:text-7xl text-center"
+              style={{ textShadow: "5px 5px 0px #1E293B" }}
             >
-              SIAP
-            </span>
-            <span
-              className="font-rubik text-5xl font-extrabold leading-none tracking-tighter text-primary sm:text-7xl md:text-8xl xl:text-9xl"
-              style={{ textShadow: "4px 4px 0px #1E293B" }}
-            >
-              LOLOS
+              Bersama Amunisi,
             </span>
           </h1>
 
-          {/* Line 2: "PTN IMPIAN" in dark + star decoration */}
+          {/* Line 2: "Mimpi Kita Terealisasi" in dark + star decoration */}
           <div
-            className="flex items-center justify-center gap-2 md:gap-3"
+            className="flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-3 uppercase"
             style={{
               opacity: mounted ? 1 : 0,
               transform: mounted ? "scale(1)" : "scale(0)",
@@ -378,19 +372,12 @@ export default function LandingHero() {
             }}
           >
             <span
-              className="font-rubik text-5xl font-extrabold leading-none tracking-tighter text-foreground sm:text-7xl md:text-8xl xl:text-9xl"
-              style={{ textShadow: "2px 2px 0px #93c5fd" }}
-              aria-label="PTN Impian"
+              className="font-rubik text-4xl font-black leading-tight tracking-tighter text-foreground sm:text-5xl md:text-6xl xl:text-7xl text-center"
+              style={{ textShadow: "4px 4px 0px #93c5fd" }}
             >
-              PTN
+              Mimpi Kita Terealisasi
             </span>
-            <span
-              className="font-rubik text-5xl font-extrabold leading-none tracking-tighter text-foreground sm:text-7xl md:text-8xl xl:text-9xl"
-              style={{ textShadow: "2px 2px 0px #93c5fd" }}
-            >
-              IMPIAN!
-            </span>
-            <StarDecoration className="h-10 w-9 animate-float sm:h-14 sm:w-12 md:h-[100px] md:w-[88px]" />
+            <StarDecoration className="h-10 w-9 animate-float sm:h-14 sm:w-12 md:h-[80px] md:w-[70px] hidden sm:block" />
           </div>
 
           {/* ── Floating notification card (kreate-style, left side) ── */}
